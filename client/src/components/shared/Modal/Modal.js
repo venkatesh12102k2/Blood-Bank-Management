@@ -71,41 +71,48 @@ const Modal = () => {
                                 </div>
                             </div>
                         </div>
+                        <div>
+                            Blood Group :
+                            <select className="form-select"
+                                aria-label="Default select example"
+                                onChange={(e) => setBloodGroup(e.target.value)}
+                            >
+                                <option defaultValue={'Open this select menu'}>Open this select menu</option>
+                                <option value={'O+'}>O+</option>
+                                <option value={'O-'}>O-</option>
+                                <option value={'AB+'}>AB+</option>
+                                <option value={'AB-'}>AB-</option>
+                                <option value={'A+'}>A+</option>
+                                <option value={'A-'}>A-</option>
+                                <option value={'B+'}>B+</option>
+                                <option value={'B-'}>B-</option>
+                            </select>
+                        </div>
 
-                        Blood Group :
-                        <select className="form-select"
-                            aria-label="Default select example"
-                            onChange={(e) => setBloodGroup(e.target.value)}
-                        >
-                            <option defaultValue={'Open this select menu'}>Open this select menu</option>
-                            <option value={'O+'}>O+</option>
-                            <option value={'O-'}>O-</option>
-                            <option value={'AB+'}>AB+</option>
-                            <option value={'AB-'}>AB-</option>
-                            <option value={'A+'}>A+</option>
-                            <option value={'A-'}>A-</option>
-                            <option value={'B+'}>B+</option>
-                            <option value={'B-'}>B-</option>
-                        </select>
+                        <div>
+                            {(inventoryType === "in") ? ("Donar Email :") : ("Hospital Email")}
+                            <InputType
+                                labelFor={"donarEmail"}
+                                labelText={'Donar Email'}
+                                inputType={'email'}
+                                name={'email'}
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                            />
+                        </div>
 
-                        {(inventoryType === "in") ? ("Donar Email :") : ("Hospital Email")}
-                        <InputType
-                            labelFor={"donarEmail"}
-                            labelText={'Donar Email'}
-                            inputType={'email'}
-                            name={'email'}
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                        />
-                        Quantity (ML) :
-                        <InputType
-                            labelFor={"quantity"}
-                            labelText={'Quantity (ML)'}
-                            inputType={'Number'}
-                            name={'quantity'}
-                            value={quantity}
-                            onChange={(e) => setQuantity(e.target.value)}
-                        />
+                        <div>
+                            Quantity (ML) :
+                            <InputType
+                                labelFor={"quantity"}
+                                labelText={'Quantity (ML)'}
+                                inputType={'Number'}
+                                name={'quantity'}
+                                value={quantity}
+                                onChange={(e) => setQuantity(e.target.value)}
+                            />
+                        </div>
+
                         <div className="modal-footer">
                             <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                             <button type="button" className="btn btn-primary" onClick={handleModalSubmit}>Submit</button>
