@@ -51,7 +51,7 @@ const Modal = () => {
                 <div className="modal-dialog">
                     <div className="modal-content">
                         <div className="modal-header">
-                            <h1 className="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                            <h1 className="modal-title fs-5" id="staticBackdropLabel">Create New Record</h1>
                             <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" />
                         </div>
                         <div className="modal-body">
@@ -71,6 +71,8 @@ const Modal = () => {
                                 </div>
                             </div>
                         </div>
+
+                        Blood Group :
                         <select className="form-select"
                             aria-label="Default select example"
                             onChange={(e) => setBloodGroup(e.target.value)}
@@ -86,6 +88,7 @@ const Modal = () => {
                             <option value={'B-'}>B-</option>
                         </select>
 
+                        {(inventoryType === "in") ? ("Donar Email :") : ("Hospital Email")}
                         <InputType
                             labelFor={"donarEmail"}
                             labelText={'Donar Email'}
@@ -94,6 +97,7 @@ const Modal = () => {
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                         />
+                        Quantity (ML) :
                         <InputType
                             labelFor={"quantity"}
                             labelText={'Quantity (ML)'}
