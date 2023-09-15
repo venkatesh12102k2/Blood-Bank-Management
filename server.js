@@ -29,9 +29,9 @@ app.use('/api/v1/admin', require('./routes/adminRoutes'));
 app.use(express.static(path.join(__dirname, './client/build')));
 
 //Static Routes
-app.get("*", function (req, res) {
-    res.sendFile(path.join(__dirname, "./client/build/index.html"))
-})
+// app.get("*", function (req, res) {
+//     res.sendFile(path.join(__dirname, "./client/build/index.html"))
+// })
 
 const PORT = process.env.PORT || 4147;
 
