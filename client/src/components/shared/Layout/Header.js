@@ -7,12 +7,14 @@ const Header = () => {
     const { user } = useSelector(state => state.auth)
     const navigate = useNavigate()
     const location = useLocation()
+
     //logout handler
     const logoutHandler = () => {
         localStorage.clear();
         toast.success('Logout Successtully');
         navigate('/login');
     }
+
     return (
         <>
             <nav className='navbar'>
