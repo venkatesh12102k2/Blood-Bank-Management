@@ -85,7 +85,7 @@ const createInventoryController = async (req, res) => {
         res.status(500).send({
             success: false,
             // message: 'Error in createInventoryController',
-            message: (req.body.inventoryType === "in") ? "Enter a valid Donar Email" : "Enter a valid Hospital Email",
+            message: error.message?error.message:((req.body.inventoryType === "in") ? "Enter a valid Donar Email" : "Enter a valid Hospital Email"),
             error
         })
     }
