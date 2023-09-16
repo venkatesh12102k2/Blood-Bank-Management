@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux'
 import { useNavigate, Link, useLocation } from 'react-router-dom'
 import { toast } from 'react-toastify'
 const Header = () => {
-    const { user } = useSelector(state => state.auth)
+    const { user } = useSelector((state) => state.auth)
     const navigate = useNavigate()
     const location = useLocation()
 
@@ -26,7 +26,7 @@ const Header = () => {
 
                         </li>
 
-                        {(user?.role === "organisation") && (location.pathname === "/" || location.pathname === "/donar" || location.pathname === "/hospital") ? (
+                        {(location.pathname === "/" || location.pathname === "/donar" || location.pathname === "/hospital") ? (
                             <li className='nav-item mx-3'>
                                 <Link to="/analytics" className='nav-link'>
                                     Analytics
