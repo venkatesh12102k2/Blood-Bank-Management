@@ -52,7 +52,7 @@ const DonarList = () => {
                         <tr key={record._id}>
                             <td>{record.name}</td>
                             <td>{record.email}</td>
-                            <td>{record.address} (ML)</td>
+                            <td>{record.address}</td>
                             <td>{record.phone}</td>
                             <td>{moment(record.createdAt).format("DD/MM/YYYY hh:mm A")}</td>
                             <td>

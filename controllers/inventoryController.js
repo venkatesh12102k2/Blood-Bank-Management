@@ -86,7 +86,8 @@ const createInventoryController = async (req, res) => {
         console.log(error);
         res.status(500).send({
             success: false,
-            message: 'Error in createInventoryController',
+            // message: 'Error in createInventoryController',
+            message: (req.body.inventoryType === "in") ? "Enter a valid Donar Email" : "Enter a valid Hospital Email",
             error
         })
     }
@@ -248,4 +249,4 @@ const getOrgForHospitalController = async (req, res) => {
     }
 }
 
-module.exports = { createInventoryController, getInventoryController, getDonarsController, getHospitalsController, getOrgController, getOrgForHospitalController, getInventoryForHospitalController, getRecentInventoryController}
+module.exports = { createInventoryController, getInventoryController, getDonarsController, getHospitalsController, getOrgController, getOrgForHospitalController, getInventoryForHospitalController, getRecentInventoryController }

@@ -90,7 +90,7 @@ const Modal = () => {
                         </div>
 
                         <div>
-                            {(inventoryType === "in") ? ("Donar Email :") : ("Hospital Email")}
+                            {(inventoryType === "in") ? ("Donar Email :") : ("Hospital Email :")}
                             <InputType
                                 labelFor={"donarEmail"}
                                 labelText={'Donar Email'}
