@@ -22,7 +22,7 @@ const Header = () => {
                     <div className='navbar-brand h1'><BiDonateBlood color='red' /> Blood Bank App</div>
                     <ul className='navbar-nav flex-row'>
                         <li className='nav-item mx-3'>
-                            <p className='nav-link'><BiUserCircle />Welcome {user?.name || user?.hospitalName || user?.organisationName}  <span className='badge bg-secondary'>{user?.role}</span></p>
+                            {/* <p className='nav-link'><BiUserCircle />Welcome {user?.name || user?.hospitalName || user?.organisationName}  <span className='badge bg-secondary'>{user?.role}</span></p> */}
 
                         </li>
 
