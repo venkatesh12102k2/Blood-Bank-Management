@@ -9,10 +9,10 @@ const createInventoryController = async (req, res) => {
         if (!user) {
             throw new Error('User Not Found');
         }
-        if (inventoryType === 'in' && user.role !== 'donar') {
+        if (req.body.inventoryType === 'in' && user.role !== 'donar') {
             throw new Error('Not a Donar');
         }
-        if (inventoryType === 'out' && user.role !== 'hospital') {
+        if (req.body.inventoryType === 'out' && user.role !== 'hospital') {
             throw new Error('Not a Hospital');
         }
 
@@ -85,7 +85,7 @@ const createInventoryController = async (req, res) => {
         res.status(500).send({
             success: false,
             // message: 'Error in createInventoryController',
-            message: error.message?error.message:((req.body.inventoryType === "in") ? "Enter a valid Donar Email" : "Enter a valid Hospital Email"),
+            message: error.message ? error.message : ((req.body.inventoryType === "in") ? "Enter a valid Donar Email" : "Enter a valid Hospital Email"),
             error
         })
     }
